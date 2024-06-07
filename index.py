@@ -15,7 +15,8 @@
 '''
 
 from bottle import route, debug, run, template, static_file, error, request
-import requests, json
+import requests
+import json
 
 
 @route('/static/<filename>')
@@ -26,6 +27,8 @@ def server_static(filename):
     return static_file(filename, root='./static')
 
 # home route
+
+
 @route('/')
 def home():
     '''
@@ -34,7 +37,8 @@ def home():
 
     if request.GET.search:
         name = request.GET.search.strip()
-        url = f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={ name }"
+        url = f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={
+            name}"
         res = requests.get(url)
         res = res.json()
         drinks = res['drinks'][0]
@@ -42,10 +46,10 @@ def home():
     else:
         return template('cocktail-search')
 
-#
+
 @route('/search')
 def search():
-  return template('cocktail-search')
+    return template('cocktail-search')
 
 
 @error(403)
@@ -53,10 +57,12 @@ def error403(code):
     return 'There is a mistake in your URL!'
     # return template('cocktail-403')
 
+
 @error()
 @error(404)
 def error(error):
     return template('cocktail-error')
+
 
 # start the server http://localhost:8080
 run(host='localhost', port=8080, debug=True, reloader=True)
