@@ -41,14 +41,14 @@ def home():
         res = requests.get(url)
         res = res.json()
         drinks = res['drinks'][0]
-        return template('cocktail-home', drinks=drinks)
+        return template('./views/cocktail-home', drinks=drinks)
     else:
-        return template('cocktail-search')
+        return template('./views/cocktail-search')
 
 
 @route('/search')
 def search():
-    return template('cocktail-search')
+    return template('./views/cocktail-search')
 
 
 @error(403)
