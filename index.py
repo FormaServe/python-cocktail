@@ -54,7 +54,6 @@ def search():
 @error(403)
 def error403(code):
     return 'There is a mistake in your URL!'
-    # return template('cocktail-403')
 
 
 @error()
@@ -64,4 +63,4 @@ def error(error):
 
 
 # start the server http://0.0.0.0:3638
-run(host='0.0.0.0', port=8080, debug=True, reloader=True)
+run(host='0.0.0.0', port=3638, debug=True, reloader=True)
