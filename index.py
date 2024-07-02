@@ -64,5 +64,5 @@ def error(error):
     return template('cocktail-error')
 
 
-# start the server http://localhost:8080
-run(host='localhost', port=8080, debug=True, reloader=True)
+# start the server http://0.0.0.0:3638
+run(host='0.0.0.0', port=8080, debug=True, reloader=True)

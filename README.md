@@ -6,21 +6,19 @@ This repository showcases FormaServe’s training capabilities and provides a si
 
 ## Features
 
-* Provides a search input to call a webservice that gives information on cocktails.
-* Webservice [www.thecocktaildb.com](www.thecocktaildb.com) is used to provide information to the python bottle application.  You do not need to sign up to the web service.
+* Provides a search input to call a webservice that gives information on cocktails
+* Webservice [www.thecocktaildb.com](www.thecocktaildb.com) is used to provide information to the python bottle application.
+
+You do not need to sign up to the web service.
 
 ## Installation
 
-* Clone this repository to your local machine.
-* Install the necessary current dependencies (Python).
-* Run the application using the provided scripts.
+Clone this repository to your local machine
 
-## Usage
+```bash
+git clone https://github.com/FormaServe/python-cocktail.git
 
-* Open a terminal or command prompt.
-* Clone this repository
-* Navigate to the project directory.
-* Execute the following commands:
+```
 
 ## Install dependencies
 
@@ -35,7 +33,7 @@ pip install bottle requests
 python index.py
 ```
 
-Then in an internet browser, open the application at the following URL [http://localhost:8080](http://localhost:8080)
+Then in an internet browser, open the application at the following URL [http://localhost:3638](http://localhost:3638)
 
 ## Virtual Environment
 
@@ -46,10 +44,10 @@ As with all python projects, it is recommended to run this application in a virt
 Use the venv module to create a virtual environment inside the project folder. Run the following command:
 
 ```bash
-python3 -m venv my_venv
+python -m venv --system-site-packages .venv
 ```
 
-Replace **my_venv** with your preferred name for the virtual environment.
+Replace **.venv** with your preferred name for the virtual environment if you don't like our naming convensions
 
 ### Activate the Virtual Environment
 
@@ -58,13 +56,15 @@ To activate the virtual environment, use the appropriate command based on your o
 #### On Windows
 
 ```bash
-my_venv\Scripts\activate
+.venv\Scripts\activate
+
 ```
 
 #### On macOS, Linux or IBM i
 
 ```bash
-source my_venv/bin/activate
+source ./bin/activate
+
 ```
 
 ### Deactivate the Virtual Environment
@@ -73,13 +73,14 @@ When you’re done working in the virtual environment, deactivate it:
 
 ```bash
 deactivate
+
 ```
 
-Remember to activate it whenever you work on your project. 😊
+Remember to activate it, or recreate it, whenever you work on your project. 😊
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Authors
 
