@@ -37,8 +37,7 @@ def home():
 
     if request.GET.search:
         name = request.GET.search.strip()
-        url = f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={
-            name}"
+        url = f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={name}"
         res = requests.get(url)
         res = res.json()
         drinks = res['drinks'][0]
