@@ -71,7 +71,7 @@ To activate the virtual environment, use the appropriate command based on your o
 #### On macOS, Linux or IBM i
 
 ```bash
-source ./bin/activate
+source ./.venv/bin/activate
 
 ```
 
