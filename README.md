@@ -9,7 +9,7 @@ This repository showcases FormaServe’s training capabilities and provides a si
 * Provides a search input to call a webservice that gives information on cocktails
 * Webservice [www.thecocktaildb.com](www.thecocktaildb.com) is used to provide information to the python bottle application.
 
-You do not need to sign up to the web service.
+Please note that you do not need to sign up to the web service.
 
 ## Installation
 
@@ -18,7 +18,13 @@ Clone this repository to your local machine
 ```bash
 git clone https://github.com/FormaServe/python-cocktail.git
 
+cd python-cocktail
+
 ```
+
+Before proceeding ensure you have a python virtual environment installed & in use.<br><br>
+See the section on Virtual Environments below.
+
 
 ## Install dependencies
 
@@ -37,7 +43,9 @@ Then in an internet browser, open the application at the following URL [http://l
 
 ## Virtual Environment
 
-As with all python projects, it is recommended to run this application in a virtual environment.  Follow the instructions below to get started.
+As with all python projects, it is recommended to run this application in a virtual environment.<br><br>
+Follow the instructions below to get started.<br><br>
+If you need more information on Python Virtual Environment, check out Andy Youens's excellent PowerWire article on virtual environments, which can be found at [https://powerwire.ukpython-environments/]
 
 ### Create the Virtual Environment
 
